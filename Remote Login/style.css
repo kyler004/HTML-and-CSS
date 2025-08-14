@@ -108,3 +108,86 @@ h2:after {
     height: 100vh;
 }
 
+/* Responsiveness */
+@media (max-width: 900px) {
+    body {
+        flex-direction: column;
+    }
+    .col-1, .col-2 {
+        width: 100%;
+        height: 50vh;
+    }
+    .col-2 {
+        min-height: 250px;
+    }
+    form {
+        width: 90%;
+    }
+}
+
+@media (max-width: 600px) {
+    .col-1, .col-2 {
+        height: auto;
+        min-height: 200px;
+        padding: 20px 0;
+    }
+    .logo {
+        font-size: 1.2rem;
+        padding: 10px;
+    }
+    form input, button {
+        font-size: 1rem;
+        padding: 12px;
+    }
+    h2::before, h2:after {
+        width: 40px;
+    }
+}
+
+/* Animations */
+
+.col-1, .col-2 {
+    transition: width 0.5s cubic-bezier(.68,-0.55,.27,1.55), height 0.5s cubic-bezier(.68,-0.55,.27,1.55);
+}
+
+form input, button {
+    transition: box-shadow 0.3s, border-color 0.3s, background 0.3s;
+}
+
+form input:focus {
+    border-color: #005eff;
+    box-shadow: 0 0 0 2px #005eff33;
+}
+
+button:hover {
+    background: linear-gradient(90deg, #005eff 60%, #004ed5 100%);
+    box-shadow: 0 4px 20px #005eff33;
+    cursor: pointer;
+}
+
+.logo {
+    animation: fadeInLogo 1s ease;
+}
+
+@keyframes fadeInLogo {
+    from { opacity: 0; transform: scale(0.8);}
+    to { opacity: 1; transform: scale(1);}
+}
+
+.col-1 {
+    animation: slideInLeft 1s cubic-bezier(.68,-0.55,.27,1.55);
+}
+
+@keyframes slideInLeft {
+    from { opacity: 0; transform: translateX(-50px);}
+    to { opacity: 1; transform: translateX(0);}
+}
+
+.col-2 {
+    animation: slideInRight 1s cubic-bezier(.68,-0.55,.27,1.55);
+}
+
+@keyframes slideInRight {
+    from { opacity: 0; transform: translateX(50px);}
+    to { opacity: 1; transform: translateX(0);}
+}
