@@ -1,0 +1,110 @@
+* {
+    padding: 0; 
+    margin: 0; 
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Helvetica, sans-serif;
+    background-color: #fff;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+}
+
+a {
+    color: #005eff; 
+    text-decoration: none;
+}
+
+.col-1 {
+    height: 100vh;
+    width: 60%; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 1rem; 
+}
+
+.logo {
+    font-weight: 800;
+    font-size: 1.5rem;
+    color: #004ed5; 
+    padding: 15px; 
+    background-color: #005eff35;
+    border-radius: 60%;
+}
+
+.col-1 h1 {
+    font-weight: bold;
+}
+
+.col-1 p {
+    color: #777; 
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px; 
+    width: 60%; 
+}
+
+form input {
+    padding: 17px;
+    border-radius: 10px;
+    font-size: 17px;
+    border: 2px solid lightgray;
+}
+
+.remember-me {
+    display: flex;
+    justify-content: space-around;
+}
+
+button {
+    padding: 20px 25px; 
+    font-size: large;
+    border: none;
+    border-radius: 50px;
+    color: #fff; 
+    background-color: #005eff;
+}
+
+h2 {
+    font-size: 0.9rem;
+    color: lightgray; 
+    margin-bottom: 20px;
+}
+
+h2::before {
+    content: ""; 
+    display: inline-block;
+    height: 1px; 
+    width: 100px; 
+    background-color: lightgray;
+    margin-bottom: 5px;
+    margin-right: 10px;  
+}
+
+h2:after {
+    content: ""; 
+    display: inline-block;
+    height: 1px; 
+    width: 100px; 
+    background-color: lightgray;
+    margin-bottom: 5px;
+    margin-left: 10px;  
+}
+
+.col-2 {
+    background: url("105346040-développement-et-programmation-de-logiciels-code-de-programme-sur-écran-d-ordinateur-portable.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 40%;
+    height: 100vh;
+}
+
